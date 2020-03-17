@@ -1,0 +1,13 @@
+import math
+def repeat(s):
+    return s + s[-1] + s[:-1]
+infile = open('cowcode.in')
+outfile = open('cowcode.out', 'w')
+word, n, = infile.readline()[:-1].split(' ')
+n = int(n)
+result = word
+for i in range(math.ceil(math.log(n / len(word), 2))):
+    result = repeat(result)
+outfile.write(result[n - 1] + '\n')
+infile.close()
+outfile.close()

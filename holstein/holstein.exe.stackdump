@@ -1,0 +1,9 @@
+Exception: STATUS_ACCESS_VIOLATION at eip=00401496
+eax=000080E8 ebx=00000064 ecx=00000021 edx=00000000 esi=6130480A edi=611CCFAE
+ebp=0062CC78 esp=0062CB50 program=C:\Users\Shobha\Documents\GitHub\usaco\holstein\holstein.exe, pid 20160, thread main
+cs=0023 ds=002B es=002B fs=0053 gs=002B ss=002B
+Stack trace:
+Frame     Function  Args
+0062CC78  00401496 (00000001, 0062CC9C, 20010100, 6100833B)
+0062CD18  6100839A (00000000, 0062CD74, 61007410, 00000000)
+End of stack trace

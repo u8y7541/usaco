@@ -1,0 +1,6 @@
+Exception: STATUS_ACCESS_VIOLATION at eip=61128C78
+eax=20058380 ebx=01000010 ecx=00000001 edx=20058378 esi=21058388 edi=20000000
+ebp=00000003 esp=0061CB70 program=C:\Users\Shobha\Documents\GitHub\usaco\pathfind\pathfind.exe, pid 12956, thread main
+cs=0023 ds=002B es=002B fs=0053 gs=002B ss=002B
+Stack trace:
+Frame     Function  Args

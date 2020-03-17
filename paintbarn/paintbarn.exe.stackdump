@@ -1,0 +1,9 @@
+Exception: STATUS_ACCESS_VIOLATION at eip=00401460
+eax=0064FC30 ebx=0064CC9C ecx=0064CB18 edx=00003200 esi=6130480B edi=611CCFAE
+ebp=0064CC78 esp=006258B0 program=C:\Users\Shobha\Documents\GitHub\usaco\paintbarn\paintbarn.exe, pid 35016, thread main
+cs=0023 ds=002B es=002B fs=0053 gs=002B ss=002B
+Stack trace:
+Frame     Function  Args
+0064CC78  00401460 (00000001, 0064CC9C, 20010100, 6100833B)
+0064CD18  6100839A (00000000, 0064CD74, 61007410, 00000000)
+End of stack trace

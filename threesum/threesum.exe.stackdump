@@ -1,0 +1,9 @@
+Exception: STATUS_ACCESS_VIOLATION at eip=00401695
+eax=20050000 ebx=00000006 ecx=0657CAF0 edx=00007160 esi=0657C9C0 edi=611CCFAE
+ebp=0657CC58 esp=0657C980 program=C:\Users\Shobha\Documents\GitHub\usaco\threesum\threesum.exe, pid 18716, thread main
+cs=0023 ds=002B es=002B fs=0053 gs=002B ss=002B
+Stack trace:
+Frame     Function  Args
+0657CC58  00401695 (61302836, 611CCFAE, 0657CD08, 6100839A)
+0657CD08  6100839A (00000000, 0657CD64, 61007410, 00000000)
+End of stack trace

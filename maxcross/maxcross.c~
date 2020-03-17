@@ -1,0 +1,60 @@
+#include <stdbool.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+int maximum(int* arr, int length) {
+	int minimum = -1, i;
+	for (i = 0; i < length; i++;) {
+		if (arr[i] > minimum) {
+			minimum = arr[i];
+		}
+	}
+	return minimum;
+}
+
+void printArray(bool* arr, int length) {
+	printf("\n\n");
+	int i;
+	for (i = 0; i < length; i++;) {
+		printf("%d\n", arr[i]);
+	}
+}
+
+int main(void)
+{
+	FILE* in = fopen("maxcross.in", "r");
+	int n, k, b, index, counter = 0, i=0, j=0;
+	fscanf(in, "%d %d %d\n", &n, &k, &b);
+	bool* l = calloc(n, sizeof(bool));
+
+	for (i = 1; i <= b; i++;) {
+		fscanf(in, "%d\n", &index);
+		l[index - 1] = true;
+	}
+	fclose(in);
+
+	int* answers = calloc(n, sizeof(int));
+	bool* slice = calloc(k, sizeof(bool));
+	for (i = 0; i < n - k + 1; i++;) {
+		if (l[i] == false) {
+			//for (int j = 0; j < k; j++) {
+				//slice[j] = l[i + j];
+			//}
+			memcpy(slice, l + i, k);
+			for (j = 0; j < k; j++;) {
+				if (slice[j] == false) {
+					answers[counter]++;
+				}
+			}
+			counter++;
+		}
+	}
+
+	FILE* out = fopen("maxcross.out", "w");
+	char answer[(int)((ceil(log10(k-maximum(answers, n)))+1)*sizeof(char))];
+	sprintf(answer, "%d", k - maximum(answers, n));
+	fputs(answer, out);
+
+	return 0;
+}
